@@ -8,9 +8,9 @@ df = pd.read_csv('https://github.com/arthursetiawan/DATA_5100_Project/blob/3ef28
 # Remove unnecessary columns
 df = df.drop(columns=['Fremont Bridge East Sidewalk','Fremont Bridge West Sidewalk'])
 
-# Count how many empty data points in df
-print(df.isnull().sum())
+# Count how many empty data points in df 
+print(df.isnull().sum()) #[Answer: 14 rows]
 
 # Replace empty data with '0'
 df.fillna(0,inplace=True)
-print(df.isnull().sum())
+print(df.isnull().sum()) #[Answer: 0 rows]
