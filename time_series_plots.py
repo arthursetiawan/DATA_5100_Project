@@ -1,4 +1,20 @@
-# Run code from data_date_indexing.py
+## Run code from data_date_indexing.py
+
+# Import pandas, numpy
+import pandas as pd
+import numpy as np
+
+# Download dataset
+df = pd.read_csv('https://github.com/arthursetiawan/DATA_5100_Project/blob/3ef28a95388bcf920158a93f95f13e64e68d1bfc/Fremont_Bridge_Bicycle_Counter.csv?raw=true',index_col=0)
+
+# Remove unnecessary columns
+df = df.drop(columns=['Fremont Bridge East Sidewalk','Fremont Bridge West Sidewalk'])
+
+# Change index to DatetimeIndex
+df.index=pd.to_datetime(df.index)
+
+# Replace empty data with quadratic interpolated data
+df['Fremont Bridge Total'] = df['Fremont Bridge Total'].interpolate(method='quadratic')
 
 # Change index to DatetimeIndex
 df.index=pd.to_datetime(df.index)
@@ -10,6 +26,9 @@ df_monthly = df.resample('M').sum()
 df_quarterly = df.resample('Q').sum()
 df_yearly = df.resample('Y').sum()
 
+## End code from data_date_indexing.py
+
+# Import matplotlib.pyplot
 import matplotlib.pyplot as plt
 
 # Define plotting function to simplify plotting
