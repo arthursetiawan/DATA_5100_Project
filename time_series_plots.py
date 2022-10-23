@@ -1,4 +1,6 @@
-## Run code from data_date_indexing.py
+# Colab notebook here: https://colab.research.google.com/drive/1xjnoG_AlWY_lYDQkPIzPx-gnZsdlY88h?usp=sharing
+
+## Run code from data_upload.py
 
 # Import pandas, numpy
 import pandas as pd
@@ -18,6 +20,10 @@ df['Fremont Bridge Total'] = df['Fremont Bridge Total'].interpolate(method='quad
 
 # Change index to DatetimeIndex
 df.index=pd.to_datetime(df.index)
+
+## End code from data_upload.py
+
+## Run code from data_date_indexing.py
 
 # Summarize data on daily, monthly, yearly bases
 df_daily = df.resample('D').sum()
