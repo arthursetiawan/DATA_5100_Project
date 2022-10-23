@@ -50,7 +50,7 @@ sns.boxplot(x=df.index.month, y=df['Fremont Bridge Total'], ax=ax)
 
 # Plot distributions by week (all data)
 fig, ax = plt.subplots(figsize=(24,10))
-sns.boxplot(x=df.index.week, y=df['Fremont Bridge Total'], ax=ax)
+sns.boxplot(x=df.index.isocalendar().week, y=df['Fremont Bridge Total'], ax=ax)
 
 # Plot distributions by day of week (all data)
 fig, ax = plt.subplots(figsize=(24,10))
