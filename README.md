@@ -18,6 +18,6 @@ this portion, along with other plots we were able to make.
 
 
 
-**Data Upload: **
+**Data Upload:**
 Our uploaded dataset from Seattle Department of Transportations live Fremont Bicycle Counter updated every month:
 https://www.seattle.gov/transportation/projects-and-programs/programs/bike-program/bike-counters/fremont-bike-counters
