@@ -64,7 +64,7 @@ plot_df(df_quarterly,x=df_quarterly.index,y=df_quarterly['Fremont Bridge Total']
 # Yearly
 plot_df(df_yearly,x=df_yearly.index,y=df_yearly['Fremont Bridge Total'],title='Yearly Bike Count on Fremont Bridge')
 
-# Plot from paper generated with the following code:
+# Yearly total bar chart plot:
 df_yearly = df_yearly.loc[df_yearly.index.year.isin(range(2013,2022))]
 fig, ax = plt.subplots(figsize=(24,10))
 sns.set(style="whitegrid")
