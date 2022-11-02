@@ -55,3 +55,33 @@ sns.boxplot(x=df.index.isocalendar().week, y=df['Fremont Bridge Total'], ax=ax)
 # Plot distributions by day of week (all data)
 fig, ax = plt.subplots(figsize=(24,10))
 sns.boxplot(x=df.index.dayofweek, y=df['Fremont Bridge Total'], ax=ax)
+
+# All plots used for paper are listed below:
+
+# Plot distributions by month (2013-2019)
+comp_1319 = df_daily.loc[df_daily['year'].isin(range(2013,2020))]
+fig, ax = plt.subplots(figsize=(24,10));
+sns.set_color_codes("muted")
+sns.boxplot(x=comp_1319.index.month, y=comp_1319['Fremont Bridge Total'], ax=ax, color='b');
+ax.tick_params(axis='both', which='major', labelsize=15);
+plt.ylabel('Daily Bicycle Traffic Count', fontsize=20);
+plt.xlabel('Month', fontsize=20);
+ax.set_xticklabels(['January','February','March','April','May','June','July','August','September','October','November','December']);
+ax.yaxis.set_major_formatter(ticker.StrMethodFormatter('{x:,.0f}'))
+
+#Summer months distribution comparison years 2013 to 2019
+comp_1920 = df_daily.loc[df_daily['month'].isin(range(5,9))]
+comp_1319 = comp_1920.loc[comp_1920['year'].isin(range(2013,2020))]
+fig, axs = plt.subplots(figsize=(24,10))
+gfg = sns.boxplot(x=comp_1319.index.month, y=comp_1319['Fremont Bridge Total'], hue=comp_1319.year, ax=axs);
+axs.tick_params(axis='both', which='major', labelsize=15);
+axs.set_xlabel('Month',fontsize=20)
+axs.set_ylabel('Daily Bicycle Traffic Count',fontsize=20)
+axs.set_ylim(500,6500)
+axs.set_xticklabels(['May','June','July','August'])
+axs.legend(loc='lower center',ncol=4,title='Year')
+plt.setp(gfg.get_legend().get_texts(), fontsize='15');
+plt.setp(gfg.get_legend().get_title(), fontsize='20');
+axs.yaxis.set_major_formatter(ticker.StrMethodFormatter('{x:,.0f}'));
+
+
