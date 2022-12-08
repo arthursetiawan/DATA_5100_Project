@@ -34,7 +34,7 @@ df_weekly.plot()
 
 #72 Weeks for forecasting forwards
 
-## Tensor Flow (Hourly Data):
+# Source Code used for this TimeSeries Forecast with TensorFlow
 #https://www.tensorflow.org/tutorials/structured_data/time_series
 
 #Test with Weekly Data
