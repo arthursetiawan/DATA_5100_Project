@@ -209,3 +209,5 @@ ax.get_lines()[1].set_markeredgewidth(0)
 plt.legend(title='Covid', loc='upper left', labels=['No_covid','Covid'])
 plt.show()
 
+#References
+#Facebook Prophet: https://facebook.github.io/Prophet/ 
