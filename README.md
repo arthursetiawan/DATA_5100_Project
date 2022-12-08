@@ -17,10 +17,30 @@ In this section, we have pre-processed our data by removing unnecessary columns,
 **Data Forecast:**
 This branch includes our modeling phase of the project, where we utilized various time series modeling methods to fit and forecast the time series bicycle traffic data. Namely, we used Statsmodels and Facebook Prophet in our analysis. With Statsmodels, we were able to seasonally decompose the time series data with season-trend decomposition using LOESS (STL) where LOESS stands for LOcally Estimated Scatterplot Smoothing. From here, we were able to forecast using STLForecast using both ARIMA and Exponential Smoothing methods. With Prophet, we were able to apply a simple seasonal decomposition and forecasting using the method with minimal conditions. Additionally, we were able to apply the 'holiday' seasonality condition in Prophet to treat COVID-19 affected dates as outliers. This provided some fine-tuning of the model. Lastly, we attempted to use the TensorFlow library that utilizes neural networks for time series forecasting. Unfortunately, we were not able to make this system work for our modeling purposes. The files used are housed in this branch and include the Facebook Prophet code in the 'seasonal_decompose_prophet.py' file, the Statsmodels code in 'statsmodels_seasonal_forecast.py', and TensorFlow code in 'tensorflow.py'.
 
-**Forecast Methods Source Code:**
+**Analysis and Forecasting Source Code:**
 
-FBProphet: 
+Statsmodels: https://www.statsmodels.org/dev/index.html 
 
-STL Decomposition:
+Statsmodels.tsa: https://www.statsmodels.org/stable/tsa.html 
+
+Statsmodels.tsa.seasonal.seasonal_decompose: https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.seasonal_decompose.html 
+
+Statsmodels.tsa.seasonal.STL: https://www.statsmodels.org/dev/generated/statsmodels.tsa.seasonal.STL.html 
+
+STLForecast: https://www.statsmodels.org/dev/generated/statsmodels.tsa.forecasting.stl.STLForecast.html 
+
+Exponential Smoothing: https://www.statsmodels.org/dev/examples/notebooks/generated/exponential_smoothing.html 
+
+ARIMA: https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima.model.ARIMA.html 
+
+Facebook Prophet: https://facebook.github.io/Prophet/ 
 
 Tensor Flow: https://www.tensorflow.org/tutorials/structured_data/time_series
+
+Sklearn: https://scikit-learn.org/stable/ 
+
+NumPy: https://numpy.org/doc/
+
+Pandas: https://pandas.pydata.org/docs/
+
+
