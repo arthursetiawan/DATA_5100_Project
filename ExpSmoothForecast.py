@@ -42,3 +42,6 @@ plt.ylabel('Monthly Bicycle Traffic Count', fontsize=20)
 plt.legend()
 plt.legend(loc=2,fontsize=15)
 plt.show()
+
+#Reference
+#Exponential Smoothing: https://www.statsmodels.org/dev/examples/notebooks/generated/exponential_smoothing.html 
