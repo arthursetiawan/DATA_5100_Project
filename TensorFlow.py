@@ -943,3 +943,6 @@ _ = plt.legend()
 
 for name, value in multi_performance.items():
   print(f'{name:8s}: {value[1]:0.4f}')
+
+  #References
+  #Tensor Flow: https://www.tensorflow.org/tutorials/structured_data/time_series
