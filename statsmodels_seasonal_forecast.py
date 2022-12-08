@@ -1,6 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+
 df = pd.read_csv('https://github.com/arthursetiawan/DATA_5100_Project/blob/3ef28a95388bcf920158a93f95f13e64e68d1bfc/Fremont_Bridge_Bicycle_Counter.csv?raw=true',index_col=0)
 
 # Remove unnecessary columns
@@ -156,4 +157,11 @@ ax.set_xlabel("Year")
 ax.set_ylabel("Bike Count")
 ax.legend(loc='upper right')
 
-
+#References
+#Statsmodels: https://www.statsmodels.org/dev/index.html 
+#Statsmodels.tsa: https://www.statsmodels.org/stable/tsa.html 
+#Statsmodels.tsa.seasonal.seasonal_decompose: https://www.statsmodels.org/devel/generated/statsmodels.tsa.seasonal.seasonal_decompose.html 
+#Statsmodels.tsa.seasonal.STL: https://www.statsmodels.org/dev/generated/statsmodels.tsa.seasonal.STL.html 
+#STLForecast: https://www.statsmodels.org/dev/generated/statsmodels.tsa.forecasting.stl.STLForecast.html 
+#Exponential Smoothing: https://www.statsmodels.org/dev/examples/notebooks/generated/exponential_smoothing.html 
+#ARIMA: https://www.statsmodels.org/dev/generated/statsmodels.tsa.arima.model.ARIMA.html 
